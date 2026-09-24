@@ -1,36 +1,59 @@
 # Conecta Ação
 
-Projeto acadêmico de front-end que apresenta uma organização social fictícia, seus projetos e formas de participação. Os nomes, depoimentos, valores de arrecadação e dados de contato são ilustrativos.
+A Conecta Ação é um projeto acadêmico de desenvolvimento front-end que apresenta uma plataforma fictícia para divulgar iniciativas sociais e incentivar a participação de voluntários. Os projetos, nomes, depoimentos, valores de arrecadação e contatos exibidos são exemplos ilustrativos.
 
-## Tecnologias
+- **Site publicado:** https://gustavobernardino.github.io/conecta-acao.final/
+- **Repositório:** https://github.com/GustavoBernardino/conecta-acao.final
+- **Autor:** Gustavo Bernardino
 
-HTML, CSS e JavaScript em módulos, sem dependências e sem etapa de build.
+## Tecnologias e estrutura
 
-## Como executar
+O projeto usa HTML, CSS e JavaScript em módulos, sem dependências externas e sem etapa de compilação.
 
-Abra a pasta do projeto no VS Code e use o Live Server no arquivo `index.html`, que fica na raiz. Os módulos JavaScript precisam de um servidor local: abrir o arquivo diretamente com `file://` pode impedir seu carregamento.
+| Caminho | Conteúdo |
+| --- | --- |
+| `index.html` | Página inicial e estrutura comum da aplicação |
+| `css/styles.css` | Estilos e regras de responsividade |
+| `js/` | Rotas, conteúdo das páginas, projetos, formulário e favoritos |
+| `imagens/` | Fotos e imagens usadas nas páginas |
+| `fontes/` | Fontes locais usadas pelo CSS |
 
-## Funcionalidades
+## Como executar no computador
 
-- Navegação em páginas internas por hash, sem recarregar a página.
-- Cartões e detalhes dos projetos; favoritos salvos apenas no navegador com localStorage.
-- Formulário de voluntariado com validação e resposta de demonstração. **Nenhum dado é enviado a um servidor ou cadastrado de verdade.**
-- Layout adaptável a telas pequenas.
+1. Baixe o repositório em **Code > Download ZIP** no GitHub e extraia os arquivos. Se você usa GitHub Desktop, pode escolher **Code > Open with GitHub Desktop** para clonar o repositório.
+2. Abra a pasta que contém `index.html` no VS Code.
+3. Inicie um servidor local, por exemplo com a extensão Live Server, e abra `index.html` por esse servidor.
+4. Navegue pelo menu para conferir as páginas. Abrir o HTML diretamente pelo caminho `file://` pode impedir o carregamento dos módulos JavaScript.
 
-## Acessibilidade
+## O que o site faz
 
-Foram revisados títulos, rótulos, texto alternativo, mensagens de erro, foco visível e contrastes principais. A revisão por código não substitui testes completos de WCAG 2.1 AA. Antes da entrega, teste a navegação por teclado (Tab, Shift+Tab, Enter e Espaço), o zoom de 200%, o formulário e uma auditoria Lighthouse no navegador.
+- Navega entre Início, Sobre nós, Projetos, Como ajudar, Voluntariado, Depoimentos e Contato sem recarregar a página.
+- Mostra cartões e detalhes de três projetos sociais ilustrativos.
+- Permite marcar projetos como favoritos. Apenas os identificadores dos favoritos são guardados no `localStorage` do próprio navegador.
+- Valida o formulário de voluntariado e mostra mensagens de erro ou de confirmação. **O formulário é uma demonstração: não envia nem armazena dados pessoais em um servidor.**
+- Adapta o layout a telas de diferentes tamanhos.
 
-## Publicação
+## Como testar
 
-No GitHub, abra Settings > Pages, selecione Deploy from a branch, branch `main` e pasta `/ (root)`. Salve e aguarde o endereço público aparecer. O arquivo `index.html` e as pastas `css`, `js`, `fontes` e `imagens` precisam estar na raiz do repositório.
+1. Abra cada item do menu e os detalhes de cada projeto. Verifique se textos, imagens e estilos carregam.
+2. Na página de Projetos, marque um favorito, atualize a página e confira se ele permanece marcado. Desmarque-o para conferir a ação inversa.
+3. Na página de Voluntariado, tente enviar o formulário vazio e verifique se os erros aparecem junto aos campos. Depois preencha os campos obrigatórios com dados fictícios e confira a mensagem de demonstração.
+4. Navegue sem mouse usando Tab, Shift+Tab, Enter e Espaço. O foco deve permanecer visível nos links, botões e campos.
+5. Teste em largura de celular e com zoom de 200%, verificando se não há conteúdo cortado, sobreposto ou rolagem horizontal indevida.
+6. Execute uma auditoria de acessibilidade no Lighthouse do navegador e revise os problemas apontados. Uma auditoria automática não comprova, sozinha, conformidade integral com a WCAG 2.1 nível AA.
 
-(https://gustavobernardino.github.io/conecta-acao.final/#voluntariado)
+## Publicação e manutenção
 
-## Manutenção
+O site está publicado pelo GitHub Pages a partir da branch `main` e da pasta `/ (root)`. Para configurar novamente: abra **Settings > Pages**, selecione **Deploy from a branch**, escolha `main` e `/ (root)` e salve.
 
-Faça mudanças em uma branch, registre commits com descrições claras, abra um pull request, revise e mescle em `main`. Depois, atualize `main` no GitHub Desktop com Fetch/Pull. Novos commits na branch de publicação atualizarão o site.
+Para uma alteração futura, crie uma branch no GitHub Desktop, faça commits com mensagens claras, publique a branch e abra um pull request para `main`. Revise as mudanças, faça o merge e atualize a `main` local com **Fetch origin** e **Pull origin**. Após um novo commit em `main`, confira a publicação na aba **Actions** e teste o endereço público.
 
-## Limitações e créditos
+## Acessibilidade e limitações
 
-O formulário é demonstrativo. Os links de redes sociais foram retirados porque não há perfis reais cadastrados. Revise a licença e o crédito de cada imagem antes de disponibilizar publicamente. Desenvolvido por Gustavo Bernardino para atividade acadêmica.
+Foram implementados rótulos nos campos, mensagens de erro textuais, descrições de imagens, foco visível, link para pular ao conteúdo e melhorias de contraste. A verificação completa de conformidade WCAG 2.1 AA ainda depende de testes manuais e com tecnologias assistivas. O formulário não possui serviço de envio, e os dados e contatos da organização são fictícios.
+
+## Imagens e créditos
+
+As imagens estão na pasta `imagens/`. Antes de usar este projeto fora do contexto acadêmico, confirme a origem, a licença e a atribuição necessária de cada uma. Não há informação suficiente nos arquivos atuais para atribuir autoria com segurança.
+
+Para mostrar o projeto no README, faça uma captura da página inicial, salve como `imagens/captura-inicio.png` e adicione uma referência a essa imagem nesta seção. Também é possível adicionar capturas das páginas de Projetos e Voluntariado.
