@@ -6,4 +6,8 @@ import { iniciarRoteador } from './router.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     iniciarRoteador();
+    document.querySelector('.pular-conteudo')?.addEventListener('click', (evento) => {
+        evento.preventDefault();
+        document.getElementById('app')?.focus();
+    });
 });

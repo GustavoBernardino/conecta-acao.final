@@ -91,9 +91,11 @@ export function inicializarFormulario() {
 
         if (!autorizacao.checked) {
             erroAutorizacao.textContent = 'É preciso autorizar o uso dos dados para continuar.';
+            autorizacao.setAttribute('aria-invalid', 'true');
             primeiroCampoInvalido = primeiroCampoInvalido || autorizacao;
         } else {
             erroAutorizacao.textContent = '';
+            autorizacao.setAttribute('aria-invalid', 'false');
         }
 
         return primeiroCampoInvalido;
@@ -115,6 +117,12 @@ export function inicializarFormulario() {
         mensagemFormulario.textContent = 'Inscrição registrada nesta demonstração. Como este é um projeto acadêmico sem servidor, nenhum dado real foi enviado.';
         mensagemFormulario.classList.add('mensagem-formulario-sucesso');
         formulario.reset();
+        [nome, email, telefone, cidade, interesse, autorizacao].forEach((campo) => {
+            campo.setAttribute('aria-invalid', 'false');
+            campo.classList.remove('campo-invalido');
+        });
+        mensagemFormulario.setAttribute('tabindex', '-1');
+        mensagemFormulario.focus();
     });
 
     // Revalida um campo assim que o visitante corrige o valor,

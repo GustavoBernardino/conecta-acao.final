@@ -51,6 +51,7 @@ function atualizarBotaoFavorito(botao, estaFavorito) {
     botao.textContent = estaFavorito ? '★ Favorito' : '☆ Favoritar';
     botao.classList.toggle('ativo', estaFavorito);
     botao.setAttribute('aria-pressed', String(estaFavorito));
+    botao.setAttribute('aria-label', `${estaFavorito ? 'Remover dos favoritos' : 'Adicionar aos favoritos'} o projeto ${botao.dataset.projeto}`);
 }
 
 function criarCard(projeto) {
@@ -118,7 +119,7 @@ function criarCard(projeto) {
     const favoritoBtn = document.createElement('button');
     favoritoBtn.type = 'button';
     favoritoBtn.className = 'botao-favorito';
-    favoritoBtn.setAttribute('aria-label', `Favoritar o projeto ${projeto.titulo}`);
+    favoritoBtn.dataset.projeto = projeto.titulo;
     atualizarBotaoFavorito(favoritoBtn, ehFavorito(projeto.id));
     favoritoBtn.addEventListener('click', () => {
         const estaFavorito = alternarFavorito(projeto.id);
