@@ -25,7 +25,7 @@ Foram revisados títulos, rótulos, texto alternativo, mensagens de erro, foco v
 
 No GitHub, abra Settings > Pages, selecione Deploy from a branch, branch `main` e pasta `/ (root)`. Salve e aguarde o endereço público aparecer. O arquivo `index.html` e as pastas `css`, `js`, `fontes` e `imagens` precisam estar na raiz do repositório.
 
-Site publicado: adicione aqui a URL exibida em Settings > Pages após publicar.
+(https://gustavobernardino.github.io/conecta-acao.final/#voluntariado)
 
 ## Manutenção
 
