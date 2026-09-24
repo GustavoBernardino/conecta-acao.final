@@ -7,7 +7,7 @@
 export function renderInicio() {
     return `
         <div class="conteudo">
-            <img src="../imagens/voluntariados.jfif" alt="Voluntariados">
+            <img src="../imagens/voluntariados.jfif" alt="Pessoas voluntárias ajudando em uma comunidade">
             <div class="texto">
                 <h1 class="titulo" data-titulo-visao tabindex="-1">Pequenas ações podem transformar comunidades inteiras</h1>
                 <p>Na Conecta Ação, unimos pessoas dispostas a ajudar com projetos sociais que precisam de apoio. Encontre uma causa, participe como voluntário e faça parte dessa transformação.</p>
@@ -84,7 +84,7 @@ export function renderSobre() {
                     </li>
                 </ul>
             </div>
-            <img src="../imagens/voluntariados_doacoes.jfif" alt="pessoas doando">
+            <img src="../imagens/voluntariados_doacoes.jfif" alt="Pessoas doando para causas sociais">
         </section>`;
 }
 
