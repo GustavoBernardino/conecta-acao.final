@@ -7,7 +7,7 @@
 export function renderInicio() {
     return `
         <div class="conteudo">
-            <img src="../imagens/voluntariados.jfif" alt="Pessoas voluntárias ajudando em uma comunidade">
+            <img src="imagens/voluntariados.jfif" alt="Pessoas voluntárias ajudando em uma comunidade">
             <div class="texto">
                 <h1 class="titulo" data-titulo-visao tabindex="-1">Pequenas ações podem transformar comunidades inteiras</h1>
                 <p>Na Conecta Ação, unimos pessoas dispostas a ajudar com projetos sociais que precisam de apoio. Encontre uma causa, participe como voluntário e faça parte dessa transformação.</p>
@@ -84,7 +84,7 @@ export function renderSobre() {
                     </li>
                 </ul>
             </div>
-            <img src="../imagens/voluntariados_doacoes.jfif" alt="Pessoas doando para causas sociais">
+            <img src="imagens/voluntariados_doacoes.jfif" alt="Pessoas doando para causas sociais">
         </section>`;
 }
 
@@ -230,7 +230,7 @@ export function renderDepoimentos() {
 
             <div class="depoimentos-container">
                 <article class="depoimento-card">
-                    <img src="../imagens/mariana.png" alt="Foto representativa de Mariana Alves">
+                    <img src="imagens/mariana.png" alt="Foto representativa de Mariana Alves">
                     <div class="estrelas" aria-hidden="true">★★★★★</div>
                     <p>
                         “Participar das ações da Conecta Ação me mostrou que todos
@@ -241,7 +241,7 @@ export function renderDepoimentos() {
                 </article>
 
                 <article class="depoimento-card">
-                    <img src="../imagens/calors.png" alt="Foto representativa de Carlos Mendes">
+                    <img src="imagens/calors.png" alt="Foto representativa de Carlos Mendes">
                     <div class="estrelas" aria-hidden="true">★★★★★</div>
                     <p>
                         “A plataforma nos ajudou a encontrar voluntários e apresentar
@@ -252,7 +252,7 @@ export function renderDepoimentos() {
                 </article>
 
                 <article class="depoimento-card">
-                    <img src="../imagens/ana.png" alt="Foto representativa de Ana Souza">
+                    <img src="imagens/ana.png" alt="Foto representativa de Ana Souza">
                     <div class="estrelas" aria-hidden="true">★★★★★</div>
                     <p>
                         “Gostei da transparência e da facilidade para conhecer os
