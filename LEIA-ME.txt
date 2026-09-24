@@ -1,0 +1,53 @@
+Conecta Ação — versão SPA (JavaScript)
+=======================================
+
+Estrutura de pastas (conforme o guia):
+  html/    -> index.html
+  css/     -> styles.css
+  imagens/ -> todas as fotos já incluídas
+  fontes/  -> Charm e OpenSans já incluídas
+  js/      -> main.js, router.js, views.js, projetos.js,
+              formulario.js, storage.js
+
+Como testar:
+  1. Abra um servidor local na raiz do projeto (os módulos JS usam
+     import/export e o navegador bloqueia isso em file://).
+     Exemplos:
+       python3 -m http.server 8000
+       (ou a extensão "Live Server" do VS Code)
+  2. Acesse http://localhost:8000/html/index.html
+
+Imagens extras incluídas mas não usadas no site (fique à vontade
+para trocar alguma foto do projeto por elas):
+  imagens/criancas.jfif
+  imagens/doacoes2.jfif
+  imagens/doando.jfif
+  imagens/voluntariados2.jfif
+
+Fontes extras incluídas mas não usadas no site (o CSS original só
+usa Charm Bold e OpenSans Italic; estas ficam disponíveis caso
+queira variar pesos em algum título ou texto):
+  fontes/Charm-Regular.ttf
+  fontes/OpenSans-VariableFont_wdth_wght.ttf
+
+O que foi implementado (ver Guia_Projeto_SPA_JavaScript):
+  - Roteamento por hash (#inicio, #sobre, #projetos, #como-ajudar,
+    #voluntariado, #depoimentos, #contato) trocando o conteúdo de
+    <main id="app"> sem recarregar a página, com título da aba,
+    link ativo no menu e foco no título da visão.
+  - Rota inválida mostra uma tela "Página não encontrada" com
+    link de volta ao início.
+  - Cartões de projeto gerados a partir de uma lista de dados
+    (js/projetos.js), com % de arrecadação calculada
+    automaticamente (arrecadado / meta), lista vazia tratada, e
+    "Conhecer projeto" abrindo uma visão de detalhes real
+    (#projeto-<id>) em vez de voltar para a mesma lista.
+  - Formulário de voluntariado com botão type="submit" real,
+    validação de nome, e-mail, telefone, cidade, área de interesse
+    e autorização, mensagens de erro junto a cada campo, foco no
+    primeiro campo inválido e confirmação de demonstração (deixa
+    claro que não há envio real, pois não há servidor).
+  - Favoritos de projeto salvos em localStorage
+    (chave "conectaAcao:projetosFavoritos", só os IDs dos
+    projetos — nenhum dado pessoal), persistindo ao trocar de
+    rota ou recarregar a página.
